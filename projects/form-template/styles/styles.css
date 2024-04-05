@@ -1,0 +1,223 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to bottom, #535971 22%, #efefef 22%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.page {
+  max-width: 750px;
+  margin: 80px auto;
+}
+
+h1,
+h2,
+legend {
+  font-family: "Staatliches", sans-serif;
+}
+
+header {
+  max-width: 50%;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 48px;
+}
+
+header p {
+  font-size: 20px;
+  margin: 18px 0 58px 0;
+}
+
+main {
+  background-color: #fff;
+  padding: 64px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+main form fieldset legend {
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e6e6f0;
+  width: 100%;
+  font-size: 24px;
+  line-height: 34px;
+  color: #535971;
+}
+
+main form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name-wrapper {
+  display: flex;
+  gap: 22px;
+}
+
+.field-wrapper {
+  gap: 8px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.field-wrapper input,
+select {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 8px;
+  background-color: #fafafc;
+  border: 1px solid #e6e6f0;
+  font-size: 16px;
+  line-height: 26px;
+  color: #4e4958;
+  padding: 8px 16px;
+}
+
+.field-wrapper input:invalid {
+  outline: 2px solid #ff1010;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+}
+
+label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4958;
+  display: inline;
+}
+
+span {
+  display: inline;
+  color: #9b97a3;
+}
+
+.individual-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.individual-wrapper input {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px 0 0;
+  opacity: 0;
+}
+
+.individual-wrapper label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background-color: #fafafc;
+  border: 1px solid #e6e6f0;
+}
+
+.individual-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: left 50% top 50%;
+}
+
+.individual-wrapper input:focus + label::before {
+  outline: 1px solid #000;
+}
+
+main form fieldset fieldset legend {
+  margin-bottom: 8px;
+  padding-bottom: 0px;
+  border: none;
+  font-size: 20px;
+  line-height: 34px;
+  color: #535971;
+}
+
+main form fieldset fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.mentoring-times {
+  display: flex;
+  gap: 22px;
+}
+
+.mentoring-times .field-wrapper {
+  flex: 1;
+}
+
+.mentoring-times .field-wrapper:first-child {
+  flex: 2;
+}
+
+footer {
+  background-color: #535971;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 0 0 8px 8px;
+}
+
+footer input {
+  background-color: #ff5374;
+  border: none;
+  font-size: 20px;
+  line-height: 26px;
+  padding: 16px 35%;
+  margin: 64px 0px;
+  border-radius: 8px;
+  font-family: "Staatliches", sans-serif;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer input:hover {
+  background-color: #ca435e;
+}
+
+@media screen and (max-width: 750px) {
+  .page {
+    margin: 32px auto;
+  }
+
+  header {
+    margin-left: 32px;
+  }
+
+  main {
+    margin: 32px 32px 0 32px;
+  }
+
+  footer {
+    margin: 0 32px;
+  }
+
+  footer input {
+    padding: 16px 35%;
+  }
+}

@@ -1,0 +1,2 @@
+- grid template 2: make it responsive
+- social-hub: change background img

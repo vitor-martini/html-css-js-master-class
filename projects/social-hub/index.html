@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social hub</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" href="./assets/connect.png" type="image/x-icon"
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img
+          src="https://github.com/vitor-martini.png"
+          alt="Foto de Vitor Martini"
+        />
+        <p>@vitor-martini</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a href="http://github.com/vitor-martini" target="_blank">
+            <p>Veja meu portfólio</p>
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="http://linkedin.com/in/vitor-martini" target="_blank">
+            <p>Conecte-se comigo</p>
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:vitor-martini@outlook.com" target="_blank">
+            <p>Entre em contato</p>
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <div id="social-links">
+        <a href="https://github.com/vitor-martini" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://linkedin.com/in/vitor-martini" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="mailto:vitor-martini@outlook.com" target="_blank">
+          <ion-icon name="mail-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

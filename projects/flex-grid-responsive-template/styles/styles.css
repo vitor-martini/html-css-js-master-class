@@ -1,0 +1,260 @@
+:root {
+  font-family: "Mulish", sans-serif;
+  --color-white: #f9f4fb;
+  --color-pink: #b52184;
+  --color-purple: #312d64;
+  --bg-blue: linear-gradient(to bottom right, #343193, #302c63);
+}
+
+body {
+  background-color: var(--color-white);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 3.2rem;
+}
+
+header section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#hero {
+  object-fit: cover;
+  margin-bottom: 1.8rem;
+  overflow: hidden;
+  width: min(100%, 65rem);
+  max-height: 70rem;
+}
+
+.title {
+  color: var(--color-pink);
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+header h3 {
+  color: var(--color-purple);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3.6rem;
+}
+
+header section a {
+  border: 0.5rem solid var(--color-pink);
+  border-radius: 5rem;
+  padding: 2rem 0.8rem;
+  margin-bottom: 9.4rem;
+  display: inline-block;
+}
+
+header section a img {
+  object-fit: cover;
+}
+
+.cards {
+  background-image: var(--bg-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  padding: 4.8rem 0;
+}
+
+figure {
+  margin: 0 3.6rem;
+  border-radius: 1rem;
+  padding: 2.8rem;
+  background-color: var(--color-white);
+}
+
+figure h2 {
+  color: var(--color-pink);
+  font-weight: 900;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+figure p {
+  color: var(--color-purple);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+figure img {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 3.2rem;
+}
+
+form {
+  margin: 0 3.6rem;
+}
+
+form h2 {
+  margin: 8rem 0 3.6rem;
+}
+
+input,
+textarea {
+  font-family: "Mulish", sans-serif;
+  width: 100%;
+  margin-bottom: 2.4rem;
+  border: 0.2rem solid var(--color-purple);
+  border-radius: 0.8rem;
+  padding: 1.6rem 1.6rem 1.6rem 4.8rem;
+  color: var(--color-purple);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-purple);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+#input-name {
+  background-image: url("../assets/person.svg");
+  background-repeat: no-repeat;
+  background-position: 1.2rem center;
+}
+
+#input-email {
+  background-image: url("../assets/at.svg");
+  background-repeat: no-repeat;
+  background-position: 1.2rem center;
+}
+
+#input-message {
+  height: 12.6rem;
+  padding: 1.6rem;
+}
+
+#input-submit {
+  background-image: var(--bg-blue);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 1.6rem;
+  padding: 0.8rem 1.6rem;
+  width: auto;
+  margin-bottom: 6.4rem;
+}
+
+footer {
+  background-image: var(--bg-blue);
+}
+
+footer p {
+  color: var(--color-white);
+  font-size: 600;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 3.6rem 0;
+}
+
+figure {
+  animation: appear 0.8s 0.2s backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 0 12rem 10rem;
+    position: relative;
+  }
+
+  #hero {
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  header h3 {
+    font-size: 3.2rem;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+
+  header section {
+    display: grid;
+  }
+
+  header section a {
+    justify-self: flex-start;
+  }
+
+  header section a {
+    align-self: center;
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 6.4rem 12rem;
+    gap: 6.4rem;
+  }
+
+  figure {
+    padding: 3.2rem 3.2rem 7.2rem 3.2rem;
+    margin: 0;
+  }
+
+  figure img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  figure h2 {
+    font-size: 3.6rem;
+  }
+
+  figure p {
+    font-size: 2rem;
+  }
+
+  #contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #contact form {
+    margin: 0 12rem;
+  }
+
+  #contact .stars {
+    background-image: url(../assets/stars-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

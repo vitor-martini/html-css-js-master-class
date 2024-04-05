@@ -1,0 +1,166 @@
+:root {
+  --color-base-white: #fff;
+  --color-base-gray-100: #f5f5f5;
+  --color-base-gray-300: #8d8d99;
+  --color-base-gray-900: #202024;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Mulish", sans-serif;
+  color: var(--color-base-gray-900);
+}
+
+#app {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: max-content 1fr max-content;
+}
+
+header {
+  --startY: -100%;
+  animation: move 0.2s;
+  display: flex;
+  gap: 8rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header input {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  margin: 1.6rem 0;
+  border: none;
+  background-color: var(--color-base-gray-100);
+  opacity: 0.8;
+  border-radius: 0.5rem;
+  flex: 1;
+}
+
+header a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-base-gray-300);
+}
+
+header a:hover {
+  color: var(--color-base-gray-900);
+}
+
+#user {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.container {
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+main {
+  background-color: var(--color-base-gray-100);
+}
+
+main h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+main {
+  overflow-y: scroll;
+  padding-left: 1.5rem;
+  display: grid;
+  place-content: center;
+  align-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 36rem);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem 2rem;
+}
+
+figure {
+  background-color: var(--color-base-white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+figure img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+
+  /* transition-property: filter, transform;
+  transition-duration: 200ms;
+  transition-delay: 0;
+  transition-timing-function: ease-out; */
+  transition: all 300ms ease-out;
+}
+
+figure img:hover {
+  filter: hue-rotate(8deg) contrast(101%) saturate(200%);
+  transform: scale(1.1);
+}
+
+figcaption {
+  background-color: var(--color-base-white);
+  z-index: 1;
+  position: relative;
+}
+
+figcaption h4 {
+  padding: 1.8rem 2.4rem 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+figcaption span {
+  background-color: var(--color-base-gray-100);
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  margin: 0 2.4rem 2.4rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+footer {
+  --startY: 100%;
+  animation: move 0.2s;
+  background-color: var(--color-base-white);
+}
+
+footer span {
+  display: block;
+  text-align: center;
+  padding: 2.8rem 0;
+  font-size: 1.6rem;
+}
+
+figure {
+  animation: appear 0.4s var(--delay) backwards;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
