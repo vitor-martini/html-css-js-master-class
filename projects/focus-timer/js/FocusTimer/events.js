@@ -24,6 +24,7 @@ function setMinutes () {
     let content = event.currentTarget.textContent.replace(/\D/g, "")
     if(Number(content) > 60) {
       content = 60
+      event.currentTarget.blur()
     }
     event.currentTarget.textContent = content
   });
