@@ -20,8 +20,9 @@ function setMinutes () {
     el.minutes.textContent = ""
   })
 
-  el.minutes.onkeypress = (event) => !isNaN(Number(event.key))
-  // el.minutes.onkeypress = (event) => /\d/.test(event.key) utilizando ER
+  el.addEventListener('input', () => {
+    this.value = this.value.replace(/\D/g, '')
+  });
 
   el.minutes.addEventListener("blur", (event) => {
     let time = event.currentTarget.textContent
