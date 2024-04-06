@@ -20,8 +20,12 @@ function setMinutes () {
     el.minutes.textContent = ""
   })
 
-  el.addEventListener('input', () => {
-    this.value = this.value.replace(/\D/g, '')
+  el.minutes.addEventListener("input", (event) => {
+    let content = event.currentTarget.textContent.replace(/\D/g, "")
+    if(Number(content) > 60) {
+      content = 60
+    }
+    event.currentTarget.textContent = content
   });
 
   el.minutes.addEventListener("blur", (event) => {
