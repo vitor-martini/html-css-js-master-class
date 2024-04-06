@@ -1,15 +1,23 @@
+/* :root {
+  --bg-constrols: #242424;
+  --bg: #121214;
+  --tt: #F8F8FC;
+  --tt-primary: #42D3FF;
+  --tt-secondary: #F8F8FC;
+} */
+
 :root {
-  --bg-main: linear-gradient(to bottom right, #343193, #302c63);
-  --bd-item: #b52184;
-  --bg-item: #fff;
-  --hd-item: #b52184;
+  --bg-main: #121214;
+  --bd-item: #36afd4;
+  --bg-item: #F8F8FC;
+  --hd-item: #36afd4;
   --tt-item: #4e5055;
-  --hd-item-hover: #911b69;
-  --bd-item-hover: #911b69;
+  --hd-item-hover: #2e92b1;
+  --bd-item-hover: #2e92b1;
 }
 
 body {
-  background-image: var(--bg-main) ;
+  background: var(--bg-main) ;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }
@@ -69,7 +77,7 @@ h2:hover {
   }
     
   ul {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   li {
