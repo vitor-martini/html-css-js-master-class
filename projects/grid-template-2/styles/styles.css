@@ -27,6 +27,7 @@ header {
 }
 
 header input {
+  width: 100%;
   font-family: "Mulish", sans-serif;
   font-size: 1.6rem;
   padding: 1.6rem;
@@ -162,5 +163,38 @@ figure {
 
   50% {
     transform: scale(1.1);
+  }
+}
+
+@media (max-width: 1150px) {
+  header  {
+    gap: 1.6rem;
+  }
+
+  .container {
+    padding: 0 1.6rem;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 36rem);
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    gap: 1.6rem;
+  }
+
+  .container {
+    padding: 0 1.6rem;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    padding: 0;
   }
 }
