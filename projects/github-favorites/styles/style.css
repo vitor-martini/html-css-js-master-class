@@ -1,0 +1,180 @@
+:root {
+  --ff-primary: 'Roboto', sans-serif;
+  --bg-main: #000;
+  --bg-search: #06181C;
+  --bg-table: #092D38;
+  --bg-odd-row: #041013;
+  --bg-even-row: #0a272e;
+  --bd-table: #4A808C;
+  --delete-button: #F75A68;
+  --placeholder-search: #7C7C8A;
+  --primary-white: #E1E1E6;
+  --button-favorite: #065E7C;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--primary-white);
+  font-family: var(--ff-primary);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+#app {
+  max-width: 1000px;
+  margin: 10rem auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.search-wrapper {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  font-size: 1.4rem;
+  border: none;
+  background-color: var(--bg-search);
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  margin-right: 0.8rem;
+  width: 100%;
+  color: var(--primary-white);
+}
+
+input::placeholder {
+  color: var(--placeholder-search);
+}
+
+header button {
+  color: var(--primary-white);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  border: none;
+  background-color: var(--button-favorite);
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: var(--primary-white);
+  color: var(--button-favorite);
+}
+
+table * {
+  font-size: 2rem;
+  line-height: 160%;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 0.2rem solid var(--bd-table);
+}
+
+tbody {
+  display: block;
+  max-height: 50rem;
+  overflow-y: scroll;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--bg-table);
+  border-bottom: 0.1rem solid var(--bd-table);
+  padding: 2.4rem 4rem;
+}
+
+tr {
+  background-color: var(--bg-even-row);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--bg-odd-row);
+}
+
+td {
+  border-bottom: 0.1rem solid var(--bd-table);
+  padding: 2.4rem 4rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td.user a{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.identification-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+td.user p {
+  font-weight: 600;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+} 
+
+.user {
+  width: 40%;
+}
+
+.repositories, .followers, .delete {
+  vertical-align: middle;
+  width: 20%;
+}
+
+.delete button{
+  background-color: transparent;
+  color: var(--delete-button);
+  border: none;
+  cursor: pointer;
+}
+
+.delete button:hover{
+  background-color: transparent;
+  color: var(--delete-button);
+  border: none;
+}
