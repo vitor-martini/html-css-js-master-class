@@ -4,8 +4,8 @@ import * as sounds from "./sounds.js"
 import state from "./state.js"
 
 function toggleRunning() {
-  el.pauseButton.classList.toggle("hiden")
-  el.startButton.classList.toggle("hiden")
+  el.pauseButton.classList.toggle("hidden")
+  el.startButton.classList.toggle("hidden")
 
   state.isRunning = !state.isRunning
   if(state.isRunning) {
@@ -40,9 +40,9 @@ function minus() {
 }
 
 function showStartButton() {
-  if (el.startButton.classList.contains("hiden")) {
-    el.pauseButton.classList.toggle("hiden")
-    el.startButton.classList.toggle("hiden")
+  if (el.startButton.classList.contains("hidden")) {
+    el.pauseButton.classList.toggle("hidden")
+    el.startButton.classList.toggle("hidden")
   }
 }
 
