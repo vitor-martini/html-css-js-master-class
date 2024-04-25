@@ -44,6 +44,8 @@ body * {
   padding: 0 4rem;
 }
 
+/* HEADER */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -100,6 +102,9 @@ header button:hover {
 header button:focus {
   outline: 0.1rem solid var(--bd-table);
 }
+
+
+/* TABLE */
 
 table * {
   font-size: 2rem;
@@ -222,6 +227,7 @@ td.user img {
   background: var(--crossbar-hover);
 }
 
+/* NO FAVS */
 #no-favs {
   background-color: var(--bg-no-favs);
   height: calc(100vh - 30rem);
@@ -256,6 +262,7 @@ td.user img {
   display: none;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 767px) {
   header {
     display: flex;
